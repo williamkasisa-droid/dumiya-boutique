@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique - Dumiya</title>
+<link rel="stylesheet" href="boutique.css">
+</head>
+<body>
+<header>
+<img src="DUMIYA 2.png" alt="Logo officiel Dumiya">
+<nav>
+<a href="index.html">Accueil</a>
+<a href="boutique.html" class="active">Boutique</a>
+<a href="a_propos.html">À propos</a>
+</nav>
+</header>
+
+<main class="container">
+<h1 class="page-title">Notre Catalogue de Produits</h1>
+
+<!-- Barre de Recherche style Pilule -->
+<div class="search-container">
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Rechercher..." onkeyup="applyFilters()">
+<button class="search-btn" onclick="applyFilters()" aria-label="Rechercher">
+<svg viewBox="0 0 24 24">
+<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+</svg>
+</button>
+</div>
+</div>
+
+<!-- Filtres par catégories -->
+<div class="filters">
+<button class="filter-btn active" onclick="setCategory('all', this)">Tous les produits</button>
+<button class="filter-btn" onclick="setCategory('phone', this)">Téléphones</button>
+<button class="filter-btn" onclick="setCategory('laptop', this)">Ordinateurs Laptops</button>
+<button class="filter-btn" onclick="setCategory('tablet', this)">Tablettes</button>
+</div>
+
+<!-- Grille des Produits -->
+<div class="grid">
+
+<!-- TÉLÉPHONES (1 à 8) -->
+<article class="card" data-category="phone">
+<img src="SAMSUNG.jpg" alt="Samsung Galaxy S23 Ultra">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">Samsung Galaxy S23 Ultra</h3>
+<ul class="specs">
+<li>Stockage : 256 Go / 12 Go RAM</li>
+<li>Appareil photo : 200 MP</li>
+<li>État : Scellé</li>
+</ul>
+<div class="price">850 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20Samsung%20Galaxy%20S23%20Ultra" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="phone">
+<img src="PIXEL.jpg" alt="Google Pixel 7 Pro">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">Google Pixel 7 Pro</h3>
+<ul class="specs">
+<li>Stockage : 128 Go / 12 Go RAM</li>
+<li>Caméra haute précision</li>
+<li>Système Android Pur</li>
+</ul>
+<div class="price">420 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20Google%20Pixel%207%20Pro" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="phone">
+<img src="iphone 15.jpg" alt="iPhone 15 Pro Max">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">iPhone 15 Pro Max</h3>
+<ul class="specs">
+<li>256 Go | Puce A17 Pro</li>
+<li>Finition Titane</li>
+<li>Neuf scellé</li>
+</ul>
+<div class="price">1200 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20l%20iPhone%2015%20Pro%20Max" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="phone">
+<img src="iphone 13.jpg" alt="iPhone 13 Pro">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">iPhone 13 Pro</h3>
+<ul class="specs">
+<li>128 Go | Écran ProMotion 120Hz</li>
+<li>Batterie 95%</li>
+<li>Très bon état</li>
+</ul>
+<div class="price">650 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20l%20iPhone%2013%20Pro" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="phone">
+<img src="samsung Galaxy A54.jpg" alt="Samsung Galaxy A54 5G">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">Samsung Galaxy A54 5G</h3>
+<ul class="specs">
+<li>128 Go / 8 Go RAM</li>
+<li>Écran Super AMOLED 120Hz</li>
+<li>Neuf en carton</li>
+</ul>
+<div class="price">310 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20Samsung%20Galaxy%20A54" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="phone">
+<img src="Redmi note 12pro.jpg" alt="Xiaomi Redmi Note 12 Pro">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">Xiaomi Redmi Note 12 Pro</h3>
+<ul class="specs">
+<li>256 Go / 8 Go RAM</li>
+<li>Charge ultra rapide 67W</li>
+<li>Neuf scellé</li>
+</ul>
+<div class="price">250 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20Xiaomi%20Redmi%20Note%2012%20Pro" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="phone">
+<img src="Techno camon 20.jpg" alt="Tecno Camon 20 Premier">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">Tecno Camon 20 Premier</h3>
+<ul class="specs">
+<li>512 Go / 8 Go RAM</li>
+<li>Capteur photo 108 MP</li>
+<li>Neuf scellé</li>
+</ul>
+<div class="price">330 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20Tecno%20Camon%2020" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="phone">
+<img src="Infinix note 30 VIP.jpg" alt="Infinix Note 30 VIP">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">Infinix Note 30 VIP</h3>
+<ul class="specs">
+<li>256 Go / 12 Go RAM</li>
+<li>Charge sans fil 50W</li>
+<li>Neuf scellé</li>
+</ul>
+<div class="price">290 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20l%20Infinix%20Note%2030%20VIP" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<!-- ORDINATEURS LAPTOPS (9 à 14) -->
+<article class="card" data-category="laptop">
+<img src="HP.jpg" alt="HP EliteBook">
+<div class="card-content">
+<span class="badge">Ordinateur</span>
+<h3 class="card-title">HP Core i7 - 11ème Gén.</h3>
+<ul class="specs">
+<li>RAM : 16 Go | SSD : 512 Go</li>
+<li>Écran 14" Full HD</li>
+<li>Clavier rétroéclairé</li>
+</ul>
+<div class="price">490 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20PC%20HP%20Core%20i7" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="laptop">
+<img src="Macbook air M1.jpg" alt="MacBook Air M1">
+<div class="card-content">
+<span class="badge">Ordinateur</span>
+<h3 class="card-title">MacBook Air M1</h3>
+<ul class="specs">
+<li>RAM : 8 Go | SSD : 256 Go</li>
+<li>Écran Retina 13.3"</li>
+<li>Autonomie jusqu'à 18h</li>
+</ul>
+<div class="price">780 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20MacBook%20Air%20M1" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="laptop">
+<img src="Dell XPS 13.jpg" alt="Dell XPS 13">
+<div class="card-content">
+<span class="badge">Ordinateur</span>
+<h3 class="card-title">Dell XPS 13 Intel Core i7</h3>
+<ul class="specs">
+<li>RAM : 16 Go | SSD : 512 Go</li>
+<li>Écran Tactile 4K Ultra HD</li>
+<li>Châssis Aluminium</li>
+</ul>
+<div class="price">820 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20Dell%20XPS%2013" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="laptop">
+<img src="lenovo thinkpad.jpg" alt="Lenovo ThinkPad X1 Carbon">
+<div class="card-content">
+<span class="badge">Ordinateur</span>
+<h3 class="card-title">Lenovo ThinkPad X1 Carbon</h3>
+<ul class="specs">
+<li>Core i7 10ème | 16 Go RAM</li>
+<li>SSD 512 Go | Ultra léger</li>
+<li>Robuste & Sécurisé</li>
+</ul>
+<div class="price">550 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20Lenovo%20ThinkPad" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="laptop">
+<img src="ASUS ZenBook 14.jpg" alt="ASUS ZenBook 14">
+<div class="card-content">
+<span class="badge">Ordinateur</span>
+<h3 class="card-title">ASUS ZenBook 14 OLED</h3>
+<ul class="specs">
+<li>Ryzen 7 | 16 Go RAM | SSD 512 Go</li>
+<li>Superbe écran OLED</li>
+<li>Ultra fin & Élégant</li>
+</ul>
+<div class="price">690 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20l%20ASUS%20ZenBook" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="laptop">
+<img src="HP Envy x360.jpg" alt="HP Envy x360">
+<div class="card-content">
+<span class="badge">Ordinateur</span>
+<h3 class="card-title">HP Envy x360 Convertible</h3>
+<ul class="specs">
+<li>Core i5 12ème | 8 Go RAM | SSD 512 Go</li>
+<li>Écran Tactile Pivotant 360°</li>
+<li>Stylet inclus</li>
+</ul>
+<div class="price">580 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20HP%20Envy%20x360" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<!-- TABLETTES (15 à 20) -->
+<article class="card" data-category="tablet">
+<img src="TABLETTE.png" alt="iPad Air 5">
+<div class="card-content">
+<span class="badge">Tablette</span>
+<h3 class="card-title">iPad Air 5 M1</h3>
+<ul class="specs">
+<li>64 Go | Puce Apple M1</li>
+<li>Écran Liquid Retina 10.9"</li>
+<li>Compatibilité Apple Pencil 2</li>
+</ul>
+<div class="price">590 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20l%20iPad%20Air%205" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="tablet">
+<img src="Samsung Galaxy Tab S8.jpg" alt="Samsung Galaxy Tab S8">
+<div class="card-content">
+<span class="badge">Tablette</span>
+<h3 class="card-title">Samsung Galaxy Tab S8</h3>
+<ul class="specs">
+<li>128 Go | 8 Go RAM</li>
+<li>S-Pen Inclus</li>
+<li>Écran 11" 120Hz</li>
+</ul>
+<div class="price">520 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20la%20Samsung%20Galaxy%20Tab%20S8" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="tablet">
+<img src="Ipad 10th Gén.jpg" alt="iPad 10ème Génération">
+<div class="card-content">
+<span class="badge">Tablette</span>
+<h3 class="card-title">iPad 10ème Génération</h3>
+<ul class="specs">
+<li>64 Go | Wifi</li>
+<li>Design tout écran 10.9"</li>
+<li>Port USB-C</li>
+</ul>
+<div class="price">410 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20l%20iPad%2010" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="tablet">
+<img src="xiami pad 6.jpg" alt="Xiaomi Pad 6">
+<div class="card-content">
+<span class="badge">Tablette</span>
+<h3 class="card-title">Xiaomi Pad 6</h3>
+<ul class="specs">
+<li>128 Go / 8 Go RAM</li>
+<li>Écran WQHD+ 144Hz</li>
+<li>Processeur Snapdragon 870</li>
+</ul>
+<div class="price">320 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20la%20Xiaomi%20Pad%206" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="tablet">
+<img src="Lenovo tab p11.jpg" alt="Lenovo Tab P11 Pro">
+<div class="card-content">
+<span class="badge">Tablette</span>
+<h3 class="card-title">Lenovo Tab P11 Pro</h3>
+<ul class="specs">
+<li>128 Go / 6 Go RAM</li>
+<li>Écran OLED 2K 11.2"</li>
+<li>Haut-parleurs JBL Quad</li>
+</ul>
+<div class="price">360 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20la%20Lenovo%20Tab%20P11" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<article class="card" data-category="tablet">
+<img src="samsung tab A9.jpg" alt="Samsung Galaxy Tab A9+">
+<div class="card-content">
+<span class="badge">Tablette</span>
+<h3 class="card-title">Samsung Galaxy Tab A9+</h3>
+<ul class="specs">
+<li>64 Go / 4 Go RAM</li>
+<li>Écran 11" Full HD</li>
+<li>Idéal pour la famille / Études</li>
+</ul>
+<div class="price">210 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20la%20Samsung%20Galaxy%20Tab%20A9" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+</div>
+</main>
+
+<footer>
+<p><strong class="nom">Dumiya Kinshasa</strong> - Votre partenaire de confiance</p>
+<p>292, 24 NOV., AV.BANSANKUSU, EN FACE DE L'AVENU DE LA SCIENCE</p>
+<p>Téléphone : +243985195655</p>
+<p style="margin-top: 10px; font-size: 0.75rem; color: #888;">© Dumiya - Tous droits réservés</p>
+</footer>
+
+<script>
+let currentCategory = 'all';
+
+function setCategory(category, element) {
+currentCategory = category;
+
+const buttons = document.querySelectorAll('.filter-btn');
+buttons.forEach(btn => btn.classList.remove('active'));
+element.classList.add('active');
+
+applyFilters();
+}
+
+function applyFilters() {
+const searchValue = document.getElementById('searchInput').value.toLowerCase();
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+const title = card.querySelector('.card-title').textContent.toLowerCase();
+const category = card.getAttribute('data-category');
+
+const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+const matchesSearch = title.includes(searchValue);
+
+if (matchesCategory && matchesSearch) {
+card.style.display = 'flex';
+} else {
+card.style.display = 'none';
+}
+});
+}
+</script>
+</body>
+</html>

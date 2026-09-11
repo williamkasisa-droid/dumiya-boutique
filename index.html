@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dumiya - Vente de Téléphones & Ordinateurs</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+<img src="DUMIYA 2.png" alt="Logo officiel Dumiya">
+<nav>
+<a href="index.html" class="active">Accueil</a>
+<a href="Boutique.html">Boutique</a>
+<a href="a_propos.html">À propos</a>
+</nav>
+</header>
+
+<main class="container">
+<!-- Banner Hero -->
+<section class="hero-banner">
+<div class="hero-text">
+<h2>Dumiya, plus qu'un shop, c'est la qualité, toujours.</h2>
+<a href="Boutique.html" class="hero-btn">Découvrir nos Catégories</a>
+</div>
+</section>
+
+<!-- Catégories -->
+<section>
+<h2 class="section-title">Nos Catégories</h2>
+<div class="categories-grid">
+<div class="category-card">
+<div class="category-info">
+<h3>TÉLÉPHONE</h3>
+<a href="Boutique.html" class="category-link">[Voir la gamme]</a>
+</div>
+<div class="category-img">
+<img src="phone.png" alt="Téléphone portable">
+</div>
+</div>
+
+<div class="category-card">
+<div class="category-info">
+<h3>PC PORTABLES</h3>
+<a href="Boutique.html" class="category-link">[Voir la gamme]</a>
+</div>
+<div class="category-img">
+<img src="pc portable.jpg" alt="PC Portable">
+</div>
+</div>
+
+<div class="category-card">
+<div class="category-info">
+<h3>TABLETTE</h3>
+<a href="Boutique.html" class="category-link">[Voir la gamme]</a>
+</div>
+<div class="category-img">
+<img src="TABLETTE.png" alt="Tablette">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Produits -->
+<section>
+<h2 class="section-title">Produits Phare / Promotions</h2>
+<div class="grid">
+<!-- Téléphone 1 -->
+<article class="card" data-category="phone">
+<div>
+<img src="SAMSUNG.jpg" alt="Samsung Galaxy S23 Ultra">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">Samsung Galaxy S23 Ultra</h3>
+<ul class="specs">
+<li>Stockage : 256 Go / 12 Go RAM</li>
+<li>Appareil photo : 200 MP</li>
+<li>État : Scellé dans le carton</li>
+</ul>
+</div>
+</div>
+<div class="card-content" style="padding-top: 0;">
+<div class="price">850 $`</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20Samsung%20Galaxy%20S23%20Ultra" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<!-- Téléphone 2 -->
+<article class="card" data-category="phone">
+<div>
+<img src="PIXEL.jpg" alt="Google Pixel 7 Pro">
+<div class="card-content">
+<span class="badge">Smartphone</span>
+<h3 class="card-title">Google Pixel 7 Pro</h3>
+<ul class="specs">
+<li>Stockage : 128 Go / 12 Go RAM</li>
+<li>Caméra haute précision</li>
+<li>Système Android Pur</li>
+</ul>
+</div>
+</div>
+<div class="card-content" style="padding-top: 0;">
+<div class="price">420 `$</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20Google%20Pixel%207%20Pro" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+
+<!-- PC 1 -->
+<article class="card" data-category="laptop">
+<div>
+<img src="HP.jpg" alt="HP EliteBook Core i7">
+<div class="card-content">
+<span class="badge">Ordinateur</span>
+<h3 class="card-title">HP Core i7 - 11ème Gén.</h3>
+<ul class="specs">
+<li>RAM : 16 Go | SSD : 512 Go</li>
+<li>Écran 14" Full HD</li>
+<li>Clavier rétroéclairé</li>
+</ul>
+</div>
+</div>
+<div class="card-content" style="padding-top: 0;">
+<div class="price">490 $</div>
+<a href="https://wa.me/243985195655?text=Bonjour%20Dumiya,%20je%20suis%20intéressé%20par%20le%20PC%20HP%20Core%20i7" target="_blank" class="btn-wa">Commander sur WhatsApp</a>
+</div>
+</article>
+</div>
+</section>
+</main>
+
+<footer>
+<p><strong class="nom">Dumiya Kinshasa</strong> - Votre partenaire de confiance</p>
+<p>292, 24 NOV., AV.BANSANKUSU, EN FACE DE L'AVENU DE LA SCIENCE</p>
+<p>Téléphone : +243985195655</p>
+<p style="margin-top: 10px; font-size: 0.75rem; color: #888;">© Dumiya - Tous droits réservés</p>
+</footer>
+
+<script>
+function filterCategory(category) {
+const cards = document.querySelectorAll('.card');
+const buttons = document.querySelectorAll('.filter-btn');
+
+buttons.forEach(btn => btn.classList.remove('active'));
+if (event) event.target.classList.add('active');
+
+cards.forEach(card => {
+if (category === 'all' || card.getAttribute('data-category') === category) {
+card.style.display = 'flex';
+} else {
+card.style.display = 'none';
+}
+});
+}
+</script>
+</body>
+</html>
